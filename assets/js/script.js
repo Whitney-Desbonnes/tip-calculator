@@ -67,7 +67,7 @@ btnReset.addEventListener('click', () => {
     totalPerPerson.forEach( totalPerPersons => {
         totalPerPersons.textContent = "0,00 €";
     });
-    btnReset.classList.toggle('btn__reset-active');
+    btnReset.classList.remove('btn__reset-active');
 })
 
 
