@@ -5,33 +5,53 @@ let otherPourcentage = document.querySelector('#other-percentage');
 let numberOfPeople = document.querySelector('#number-of-people');
 let totalPerPerson = document.querySelectorAll('.total-per-person');
 let btnReset = document.querySelector('#btn__reset');
-// console.log(totalPerPerson);
+let thisPourcent;
 
-// récupère la valeur des inputs
 inputs.forEach( input => {
+    // lance la fonction calcul() à chaque changements de valeur dans un input
     input.addEventListener('change', () => {
         calcul();
     });
 })
 
-// récupère la valeur du pourcentage selectionné
+
 pourcentages.forEach ( pourcentage => {
     pourcentage.addEventListener('click', () => {
+        // récupère la valeur du pourcentage selectionné
+        thisPourcent = pourcentage.getAttribute('data-number');
+
+        // changement du style
         for(i=0; i < pourcentages.length; i++) {
             pourcentages[i].classList.remove('btn-active');
         }
         pourcentage.classList.toggle("btn-active");
+
+        // reset de l'input autre %
         otherPourcentage.value="";
+        
+        // lance la fonction calcul() à chaque clic sur un des pourcentages prédéfinies
         calcul();
     })
 })
 
-// calcul
-function calcul () {
-    for (i=0; i < totalPerPerson.length; i++) {
-        totalPerPerson[0].textContent = Math.round(((facture.value * (1 + (otherPourcentage.value/100))) - facture.value) / numberOfPeople.value) + " €";
 
-        totalPerPerson[1].textContent = facture.value / numberOfPeople.value + " €";
+ // calcul
+ function calcul () {
+    for (i=0; i < totalPerPerson.length; i++) {
+
+        if (facture.value > 0 && numberOfPeople.value > 0) {
+
+            totalPerPerson[1].textContent = Math.round(facture.value / numberOfPeople.value) + " €";
+
+            if (otherPourcentage.value > 0) {
+                totalPerPerson[0].textContent = Math.round(((facture.value * (1 + (otherPourcentage.value/100))) - facture.value) / numberOfPeople.value) + " €";
+
+            }
+
+            else if (thisPourcent > 0 ) {
+                totalPerPerson[0].textContent = Math.round(((facture.value * (1 + (thisPourcent/100))) - facture.value) / numberOfPeople.value) + " €";
+            }
+        }
     }
 }
 
