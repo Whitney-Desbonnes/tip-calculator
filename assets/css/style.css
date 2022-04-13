@@ -1,0 +1,159 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    bottom: 0;
+    margin: 0;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --body-bgc-color:#c5e4e7;
+    --h1-text-color:#2a4e50;
+    --section-bgc-color:#ffffff;
+    --total-bgc-color:#00474b;
+    --buttton-bgc-color:#26c2ad;
+    --button-text-color:#004a4b;
+    --person-text-color:#5c9396;
+    --total-per-person:#30bdaa;
+    --bloc1-title-color:#506262;
+}
+
+body {
+    background-color: var(--body-bgc-color);
+    font-size: 1.6em;
+}
+
+h1 {
+    text-align: center;
+    color: var(--h1-text-color);
+    letter-spacing: 9px;
+    font-size: 1.4em;
+    margin: 30px 0;
+}
+
+h1 span {
+    letter-spacing:11px;
+}
+
+.tips-calculator {
+    background-color: var(--section-bgc-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.tips-calculator__bloc1 {
+    color: var(--bloc1-title-color);
+    font-size: 1.2em;
+}
+
+.tips-calculator__bloc1 > input, p {
+    margin: 10px 0;
+}
+
+.tips-calculator__bloc1 .facture, .number-of-people {
+    background-color: #f3f8fb;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    text-align: end;
+    padding: 0 15px;
+    color: #053738;
+    font-size: 1.3em;
+    font-weight: 700;
+    box-shadow: 0 0 3px #9cacb6;
+    
+}
+
+.facture {
+    background: url('../img/icon-dollar.svg') no-repeat scroll 15px 10px;
+}
+
+.number-of-people {
+    background: url('../img/icon-person.svg') no-repeat scroll 15px 10px;
+}
+
+input:focus {
+    outline: none!important;
+    border:2px solid #053738;
+}
+
+
+
+.tips-calculator__bloc1 .pourcentage {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--section-bgc-color);
+    text-align: center;
+    margin: 14px 0;
+    font-weight: 700;
+}
+
+.btn-active {
+    background-color: var(--buttton-bgc-color)!important;
+}
+
+.tips-calculator__bloc1 .pourcentage div, .other-percentage {
+    background-color: var(--total-bgc-color);
+    width: 45%;
+    margin: 6px auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.tips-calculator__bloc1 .other-percentage {
+    background-color: #f3f8fb!important;
+    text-align: end;
+    padding: 0 15px;
+    color: #496c66;
+    box-shadow: 0 0 3px #9cacb6;
+    font-weight: 700;
+}
+
+
+.tips-calculator__bloc2 {
+    background-color: var(--total-bgc-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    color: var(--body-bgc-color);
+}
+
+.container .person {
+    color: var(--person-text-color);
+}
+
+.container .total-per-person {
+    color: var(--total-per-person);
+    font-size: 2em;
+}
+
+.btn__reset {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: var(--buttton-bgc-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/* wwwwwwwwwwwwwwwwwwwwwwww FOOTER  wwwwwwwwwwwwwwwwwwwwwwww */
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
