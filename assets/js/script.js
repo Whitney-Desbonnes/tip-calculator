@@ -10,6 +10,7 @@ let thisPourcent;
 inputs.forEach( input => {
     // lance la fonction calcul() à chaque changements de valeur dans un input
     input.addEventListener('change', () => {
+        btnReset.classList.add('btn__reset-active');
         calcul();
     });
 })
@@ -25,6 +26,7 @@ pourcentages.forEach ( pourcentage => {
             pourcentages[i].classList.remove('btn-active');
         }
         pourcentage.classList.toggle("btn-active");
+        btnReset.classList.add('btn__reset-active');
 
         // reset de l'input autre %
         otherPourcentage.value="";
@@ -65,6 +67,7 @@ btnReset.addEventListener('click', () => {
     totalPerPerson.forEach( totalPerPersons => {
         totalPerPersons.textContent = "0,00 €";
     });
+    btnReset.classList.toggle('btn__reset-active');
 })
 
 

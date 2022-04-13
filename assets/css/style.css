@@ -15,7 +15,7 @@ html {
     --section-bgc-color:#ffffff;
     --total-bgc-color:#00474b;
     --buttton-bgc-color:#26c2ad;
-    --button-text-color:#004a4b;
+    --button-text-color:#00474b;
     --person-text-color:#5c9396;
     --total-per-person:#30bdaa;
     --bloc1-title-color:#506262;
@@ -141,12 +141,17 @@ input:focus {
     width: 100%;
     padding: 10px;
     text-transform: uppercase;
-    background-color: var(--buttton-bgc-color);
-    color: var(--button-text-color);
+    background-color: #0d686d;
+    color: #025960;
     border-radius: 5px;
     font-weight: 800;
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.btn__reset-active {
+    background-color:#26c2ad;
+    color:#004a4b;
 }
 
 
