@@ -43,15 +43,15 @@ pourcentages.forEach ( pourcentage => {
 
         if (facture.value > 0 && numberOfPeople.value > 0) {
 
-            totalPerPerson[1].textContent = Math.round(facture.value / numberOfPeople.value) + " €";
+            totalPerPerson[1].textContent = Math.round((facture.value / numberOfPeople.value) * 100)/100 + " €";
 
             if (otherPourcentage.value > 0) {
-                totalPerPerson[0].textContent = Math.round(((facture.value * (1 + (otherPourcentage.value/100))) - facture.value) / numberOfPeople.value) + " €";
+                totalPerPerson[0].textContent = Math.round((((facture.value * (1 + (otherPourcentage.value/100))) - facture.value) / numberOfPeople.value) * 100)/100 + " €";
 
             }
 
             else if (thisPourcent > 0 ) {
-                totalPerPerson[0].textContent = Math.round(((facture.value * (1 + (thisPourcent/100))) - facture.value) / numberOfPeople.value) + " €";
+                totalPerPerson[0].textContent = Math.round((((facture.value * (1 + (thisPourcent/100))) - facture.value) / numberOfPeople.value) * 100)/100 + " €";
             }
         }
     }
