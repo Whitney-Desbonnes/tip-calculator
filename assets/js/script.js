@@ -68,6 +68,9 @@ btnReset.addEventListener('click', () => {
         totalPerPersons.textContent = "0,00 €";
     });
     btnReset.classList.remove('btn__reset-active');
+    for(i=0; i < pourcentages.length; i++) {
+        pourcentages[i].classList.remove('btn-active');
+    }
 })
 
 
