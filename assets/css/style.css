@@ -42,6 +42,9 @@ h1 span {
     background-color: var(--section-bgc-color);
     padding: 20px;
     border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .tips-calculator__bloc1 {
